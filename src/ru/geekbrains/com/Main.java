@@ -3,16 +3,47 @@ package ru.geekbrains.com;
 public class Main {
 
     public static void main(String[] args) {
-        Employee[] employees = new Employee[5];
-        employees[0] = new Employee("Громко Игорь Дмитриевич", "Студент", "Mail1@mail.gb", "+77777777777", 5000, 22);
-        employees[1] = new Employee("Березин Иван Игоревич", "Программист", "Mail2@mail.gb", "+77777777777", 50000, 56);
-        employees[2] = new Employee("Языкова Алина Викторовна", "Администратор", "Mail3@mail.gb", "+77777777777", 100000, 38);
-        employees[3] = new Employee("Юлятова Рофл Владимировна", "Гл. бухгалтер", "Mail$$$@mail.gb", "+12345678910", 50000000, 68);
-        employees[4] = new Employee("Белов Александр Юрьевич", "Водитель", "Mail3@mail.gb", "+77777777777", 500, 35);
-        for (int i = 0; i < employees.length; i++) {
-            if (employees[i].getAge() > 40) {
-                employees[i].printInfo();
-            }
-        }
+        // Длина/высота в метрах.
+        Cat cat = new Cat(2, 200, 0);
+        Dog dog = new Dog(4, 500, 10);
+        System.out.println("Кошка:");
+        cat.run(50);
+        cat.run(200);
+        cat.swim(100);
+        cat.jump(1);
+        cat.jump(3);
+
+        System.out.println("Собака:");
+
+        dog.run(300);
+        dog.run(500);
+        dog.swim(9);
+        dog.swim(100);
+        dog.jump(1);
+        dog.jump(5);
+
+        Animal newCat = new Cat(3, 230, 10);
+        Animal newDog = new Dog(5, 600, 20);
+
+        System.out.println("Кошка 2.0:");
+
+        System.out.println("Максимальное расстояние бега: " + newCat.maxRun + " и максимальное расстояние прыжка: " + newCat.maxJump);
+
+        newCat.run(200);
+        newCat.run(50);
+        newCat.swim(1);
+        newCat.jump(1);
+        newCat.jump(3);
+
+        System.out.println("Собака 2.0:");
+        System.out.println("Плавание: " + newDog.maxSwim + ", Бег: " + newDog.maxRun + " и высота прыжка: " + newDog.maxJump);
+
+
+        newDog.run(450);
+        newDog.run(550);
+        newDog.swim(9);
+        newDog.swim(100);
+        newDog.jump(4);
+        newDog.jump(5);
     }
 }
